@@ -191,7 +191,7 @@ to escape
     if agent-type = 3 [set escaped-3 escaped-3 + 1]
 
     if panic = 1 [set escapedp1 escapedp1 + 1]
-    if panic = 2 [set escapedp2 escapedp1 + 2]
+    if panic = 2 [set escapedp2 escapedp2 + 1]
     die
   ]
 end
@@ -1193,11 +1193,11 @@ true
 "" ""
 PENS
 "Type 1" 1.0 0 -5825686 true "" "plot (count turtles with [agent-type = 1] * 100) / (pop-tot-1 + 1)"
-"Type 2" 1.0 0 -15390905 true "" "plot (count turtles with [agent-type = 2] * 100) / (pop-tot-2 + 1)"
+"Type 2" 1.0 0 -11221820 true "" "plot (count turtles with [agent-type = 2] * 100) / (pop-tot-2 + 1)"
 "Type 3" 1.0 0 -2674135 true "" "plot (count turtles with [agent-type = 3] * 100) / (pop-tot-3 + 1)"
-"Escaped type 1" 1.0 0 -5298144 true "" "plot escaped-1"
-"Escaped type 2" 1.0 0 -11221820 true "" "plot escaped-2"
-"Escaped type 3" 1.0 0 -955883 true "" "plot escaped-3"
+"Escaped type 1" 1.0 0 -8630108 true "" "plot (escaped-1 * 100) / (pop-tot-1 + 1)"
+"Escaped type 2" 1.0 0 -13345367 true "" "plot (escaped-2 * 100) / (pop-tot-2 + 1)"
+"Escaped type 3" 1.0 0 -955883 true "" "plot (escaped-3 * 100) / (pop-tot-3 + 1)"
 
 SLIDER
 1579
@@ -1331,7 +1331,7 @@ SWITCH
 649
 leader-follower
 leader-follower
-1
+0
 1
 -1000
 
@@ -1342,7 +1342,7 @@ SWITCH
 649
 personality
 personality
-1
+0
 1
 -1000
 
@@ -1376,11 +1376,11 @@ number
 0.0
 100.0
 true
-false
+true
 "" ""
 PENS
-"default" 1.0 0 -16777216 true "" "plot escapedp1"
-"pen-1" 1.0 0 -955883 true "" "plot escapedp2"
+"Panic 1" 1.0 0 -16777216 true "" "plot escapedp1"
+"Panic 2" 1.0 0 -955883 true "" "plot escapedp2"
 
 SWITCH
 1215

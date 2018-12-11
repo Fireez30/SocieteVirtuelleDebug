@@ -199,21 +199,19 @@ to-report vectCohere
 end
 
 to check-coll
-  foreach (list speed)
-  [ x ->
-    let pas x / 3
-    let liste (list pas pas pas)
-    foreach liste
-    [
-      fd pas
-      if (pcolor = red or pcolor = brown)[
-        rt 120
-        rt random 20
-        lt random 20
-        fd pas
-      ]
-    ]
-  ]
+ let pas speed / 3
+ let liste (list pas pas pas)
+ foreach liste
+ [
+   fd pas
+   escape
+   if (pcolor = red or pcolor = brown)[
+     rt 120
+     rt random 20
+     lt random 20
+     fd pas
+   ]
+ ]
 end
 
 to turn-towards [new-heading max-turn]  ;; turtle procedure

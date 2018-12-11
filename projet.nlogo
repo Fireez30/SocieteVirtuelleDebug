@@ -421,8 +421,8 @@ GRAPHICS-WINDOW
 1
 1
 0
-0
-0
+1
+1
 1
 -16
 16
@@ -541,7 +541,7 @@ agent-number
 agent-number
 0
 100
-27.0
+22.0
 1
 1
 NIL
@@ -1035,7 +1035,7 @@ more-panic-proba-1
 more-panic-proba-1
 0
 100
-77.0
+70.0
 1
 1
 NIL
@@ -1192,11 +1192,11 @@ true
 true
 "" ""
 PENS
-"Type 1" 1.0 0 -5825686 true "" "plot (count turtles with [agent-type = 1] * 100) / (pop-tot-1 + 1)"
-"Type 2" 1.0 0 -11221820 true "" "plot (count turtles with [agent-type = 2] * 100) / (pop-tot-2 + 1)"
-"Type 3" 1.0 0 -2674135 true "" "plot (count turtles with [agent-type = 3] * 100) / (pop-tot-3 + 1)"
-"Escaped type 1" 1.0 0 -8630108 true "" "plot (escaped-1 * 100) / (pop-tot-1 + 1)"
-"Escaped type 2" 1.0 0 -13345367 true "" "plot (escaped-2 * 100) / (pop-tot-2 + 1)"
+"Type 1" 1.0 0 -2674135 true "" "plot (count turtles with [agent-type = 1] * 100) / (pop-tot-1 + 1)"
+"Type 2" 1.0 0 -13791810 true "" "plot (count turtles with [agent-type = 2] * 100) / (pop-tot-2 + 1)"
+"Type 3" 1.0 0 -955883 true "" "plot (count turtles with [agent-type = 3] * 100) / (pop-tot-3 + 1)"
+"Escaped type 1" 1.0 0 -2674135 true "" "plot (escaped-1 * 100) / (pop-tot-1 + 1)"
+"Escaped type 2" 1.0 0 -13791810 true "" "plot (escaped-2 * 100) / (pop-tot-2 + 1)"
 "Escaped type 3" 1.0 0 -955883 true "" "plot (escaped-3 * 100) / (pop-tot-3 + 1)"
 
 SLIDER
@@ -1331,7 +1331,7 @@ SWITCH
 649
 leader-follower
 leader-follower
-0
+1
 1
 -1000
 
@@ -1379,7 +1379,7 @@ true
 true
 "" ""
 PENS
-"Panic 1" 1.0 0 -16777216 true "" "plot escapedp1"
+"Panic 1" 1.0 0 -1184463 true "" "plot escapedp1"
 "Panic 2" 1.0 0 -955883 true "" "plot escapedp2"
 
 SWITCH
@@ -1389,7 +1389,7 @@ SWITCH
 579
 color-agent-type
 color-agent-type
-0
+1
 1
 -1000
 
@@ -1400,7 +1400,7 @@ SWITCH
 615
 color-using-panic
 color-using-panic
-1
+0
 1
 -1000
 
@@ -1422,7 +1422,7 @@ SWITCH
 691
 color-ocean-n
 color-ocean-n
-1
+0
 1
 -1000
 

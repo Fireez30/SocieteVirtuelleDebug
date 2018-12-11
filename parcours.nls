@@ -34,6 +34,7 @@ to search
   ask patches with [blanc = true] [set blanc false]
   ask patches with [bleu = true] [set bleu false]
   draw-path current
+  ask patches with [exit = true] [set pcolor yellow]
 end
 
 to search-step
@@ -144,7 +145,7 @@ end
 to draw-path [node]
   while [node != []] [
     set path lput get-patch node path
-   ;;ask get-patch node [set pcolor green]
+    ;;ask get-patch node [set pcolor green]
     set node get-parent node
   ]
 end

@@ -199,8 +199,8 @@ to-report vectCohere
 end
 
 to check-coll
- let pas speed / 3
- let liste (list pas pas pas)
+ let pas speed / 4
+ let liste (list pas pas pas pas)
  foreach liste
  [
    fd pas

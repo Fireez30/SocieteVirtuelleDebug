@@ -127,7 +127,8 @@ to make-exit
   [ ask patches
     [ if ((abs (pxcor - mouse-xcor)) < 1) and ((abs (pycor - mouse-ycor)) < 1)
       [ set pcolor yellow
-        set exit true]]]
+        set exit true
+        set obstacle false]]]
   display
 end
 
@@ -1389,7 +1390,7 @@ SWITCH
 579
 color-agent-type
 color-agent-type
-1
+0
 1
 -1000
 
@@ -1400,7 +1401,7 @@ SWITCH
 615
 color-using-panic
 color-using-panic
-0
+1
 1
 -1000
 
@@ -1422,7 +1423,7 @@ SWITCH
 691
 color-ocean-n
 color-ocean-n
-0
+1
 1
 -1000
 

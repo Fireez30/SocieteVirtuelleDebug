@@ -127,7 +127,8 @@ to make-exit
   [ ask patches
     [ if ((abs (pxcor - mouse-xcor)) < 1) and ((abs (pycor - mouse-ycor)) < 1)
       [ set pcolor yellow
-        set exit true]]]
+        set exit true
+        set obstacle false]]]
   display
 end
 
@@ -201,7 +202,7 @@ to go
   ask patches with [onFire = true] [update-color spread-fire]
   ask patches with [onSmoke = true] [update-color spread-smoke]
   ask turtles with [dead = false] [damage update-panic color-panic damage count-collisions]
-  ask turtles with [panic = 1 and dead = false] [A* check-coll];see-exit check-coll]
+  ask turtles with [panic = 1 and dead = false] [A* check-coll] ;see-exit]
   ask turtles with [panic = 2 and dead = false] [flock see-exit check-coll set inner-timer inner-timer - 1]
   ask turtles [check-death clear-body escape]
   check-end
@@ -541,7 +542,7 @@ agent-number
 agent-number
 0
 100
-22.0
+1.0
 1
 1
 NIL
@@ -821,7 +822,7 @@ fov-radius
 fov-radius
 0
 10
-4.0
+5.0
 1
 1
 patches
@@ -851,7 +852,7 @@ objective-choice-chance
 objective-choice-chance
 0
 100
-61.0
+60.0
 1
 1
 NIL
@@ -1389,7 +1390,7 @@ SWITCH
 579
 color-agent-type
 color-agent-type
-0
+1
 1
 -1000
 
@@ -1411,7 +1412,7 @@ SWITCH
 655
 color-ocean-o
 color-ocean-o
-1
+0
 1
 -1000
 
@@ -1427,10 +1428,10 @@ color-ocean-n
 -1000
 
 SWITCH
-1345
-621
-1477
-654
+1216
+695
+1348
+728
 color-ocean-e
 color-ocean-e
 1
@@ -1438,10 +1439,10 @@ color-ocean-e
 -1000
 
 SWITCH
-1342
-657
-1474
-690
+1213
+731
+1345
+764
 color-ocean-a
 color-ocean-a
 1

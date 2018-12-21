@@ -202,7 +202,7 @@ to go
   ask patches with [onFire = true] [update-color spread-fire]
   ask patches with [onSmoke = true] [update-color spread-smoke]
   ask turtles with [dead = false] [damage update-panic color-panic damage count-collisions]
-  ask turtles with [panic = 1 and dead = false] [A* check-coll];see-exit check-coll]
+  ask turtles with [panic = 1 and dead = false] [A* check-coll] ;see-exit]
   ask turtles with [panic = 2 and dead = false] [flock see-exit check-coll set inner-timer inner-timer - 1]
   ask turtles [check-death clear-body escape]
   check-end
@@ -376,8 +376,9 @@ to color-panic
   ]
   if color-ocean-a = true
   [
-    if role = 0 [set color white]
-    if role = 1 [set color blue]
+    if A- = 0 [set color white]
+    if A- = 1 [set color blue]
+    if role = 0 [set shape "person"]
   ]
     if color-using-panic = true
   [
@@ -473,10 +474,10 @@ NIL
 1
 
 BUTTON
-219
-623
-330
-656
+217
+626
+328
+659
 Spawn Agents
 agent-spawn
 NIL
@@ -542,7 +543,7 @@ agent-number
 agent-number
 0
 100
-0.0
+1.0
 1
 1
 NIL
@@ -627,7 +628,7 @@ max-angle-turn
 max-angle-turn
 0
 360
-0.0
+64.0
 1
 1
 NIL
@@ -659,7 +660,7 @@ factor-align
 factor-align
 0
 1
-0.0
+0.4
 0.1
 1
 NIL
@@ -674,7 +675,7 @@ factor-separate
 factor-separate
 0
 1
-0.0
+0.1
 0.1
 1
 NIL
@@ -689,7 +690,7 @@ factor-cohere
 factor-cohere
 0
 1
-0.0
+0.5
 0.1
 1
 NIL
@@ -704,7 +705,7 @@ factor-obstacles
 factor-obstacles
 0
 1
-0.0
+0.8
 0.1
 1
 NIL
@@ -719,7 +720,7 @@ fire-proba
 fire-proba
 0
 100
-0.0
+2.0
 1
 1
 NIL
@@ -734,7 +735,7 @@ smoke-proba
 smoke-proba
 0
 100
-0.0
+6.0
 1
 1
 NIL
@@ -749,7 +750,7 @@ smoke-damage
 smoke-damage
 0
 50
-0.0
+4.0
 1
 1
 NIL
@@ -764,7 +765,7 @@ fire-damage
 fire-damage
 0
 50
-0.0
+20.0
 1
 1
 NIL
@@ -807,7 +808,7 @@ fov-angle
 fov-angle
 0
 360
-0.0
+101.0
 1
 1
 NIL
@@ -822,7 +823,7 @@ fov-radius
 fov-radius
 0
 10
-0.0
+5.0
 1
 1
 patches
@@ -837,7 +838,7 @@ factor-obj
 factor-obj
 0
 1
-0.0
+0.8
 0.1
 1
 NIL
@@ -852,7 +853,7 @@ objective-choice-chance
 objective-choice-chance
 0
 100
-0.0
+60.0
 1
 1
 NIL
@@ -901,7 +902,7 @@ next-patch-range
 next-patch-range
 0
 20
-0.0
+3.0
 1
 1
 NIL
@@ -1006,7 +1007,7 @@ base-life-1
 base-life-1
 0
 150
-0.0
+60.0
 1
 1
 NIL
@@ -1021,7 +1022,7 @@ base-speed-1
 base-speed-1
 0
 2
-0.0
+0.4
 0.1
 1
 NIL
@@ -1036,7 +1037,7 @@ more-panic-proba-1
 more-panic-proba-1
 0
 100
-0.0
+70.0
 1
 1
 NIL
@@ -1051,7 +1052,7 @@ base-life-2
 base-life-2
 0
 150
-0.0
+150.0
 1
 1
 NIL
@@ -1066,7 +1067,7 @@ base-life-3
 base-life-3
 0
 150
-0.0
+90.0
 1
 1
 NIL
@@ -1081,7 +1082,7 @@ presence-type-1
 presence-type-1
 0
 100 - presence-type-2 - presence-type-3
-0.0
+34.0
 1
 1
 NIL
@@ -1096,7 +1097,7 @@ base-speed-2
 base-speed-2
 0
 2
-0.0
+1.2
 0.1
 1
 NIL
@@ -1111,7 +1112,7 @@ base-speed-3
 base-speed-3
 0
 2
-0.0
+2.0
 0.1
 1
 NIL
@@ -1126,7 +1127,7 @@ more-panic-proba-2
 more-panic-proba-2
 0
 100
-0.0
+20.0
 1
 1
 NIL
@@ -1141,7 +1142,7 @@ more-panic-proba-3
 more-panic-proba-3
 0
 100
-0.0
+50.0
 1
 1
 NIL
@@ -1156,7 +1157,7 @@ presence-type-2
 presence-type-2
 0
 100 - presence-type-1 - presence-type-3
-0.0
+33.0
 1
 1
 NIL
@@ -1171,7 +1172,7 @@ presence-type-3
 presence-type-3
 0
 100 - presence-type-1 - presence-type-2
-0.0
+33.0
 1
 1
 NIL
@@ -1209,7 +1210,7 @@ sprint-1
 sprint-1
 0
 1.0
-0.0
+0.2
 0.1
 1
 NIL
@@ -1224,7 +1225,7 @@ sprint-2
 sprint-2
 0
 1
-0.0
+0.5
 0.1
 1
 NIL
@@ -1239,7 +1240,7 @@ sprint-3
 sprint-3
 0
 1
-0.0
+1.0
 0.1
 1
 NIL
@@ -1254,7 +1255,7 @@ panic-timer-1
 panic-timer-1
 0
 20
-0.0
+12.0
 1
 1
 tick
@@ -1269,7 +1270,7 @@ panic-timer-2
 panic-timer-2
 0
 20
-0.0
+6.0
 1
 1
 tick
@@ -1284,7 +1285,7 @@ panic-timer-3
 panic-timer-3
 0
 20
-0.0
+20.0
 1
 1
 tick
@@ -1299,7 +1300,7 @@ panic-propagation
 panic-propagation
 0
 100
-0.0
+20.0
 1
 1
 NIL
@@ -1390,7 +1391,7 @@ SWITCH
 579
 color-agent-type
 color-agent-type
-0
+1
 1
 -1000
 
@@ -1412,7 +1413,7 @@ SWITCH
 655
 color-ocean-o
 color-ocean-o
-1
+0
 1
 -1000
 
@@ -1429,9 +1430,9 @@ color-ocean-n
 
 SWITCH
 1216
-697
+695
 1348
-730
+728
 color-ocean-e
 color-ocean-e
 1
@@ -1440,9 +1441,9 @@ color-ocean-e
 
 SWITCH
 1213
-733
+731
 1345
-766
+764
 color-ocean-a
 color-ocean-a
 1

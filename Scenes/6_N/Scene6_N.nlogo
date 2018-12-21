@@ -376,8 +376,9 @@ to color-panic
   ]
   if color-ocean-a = true
   [
-    if role = 0 [set color white]
-    if role = 1 [set color blue]
+    if A- = 0 [set color white]
+    if A- = 1 [set color blue]
+    if role = 0 [set shape "person"]
   ]
     if color-using-panic = true
   [
@@ -474,9 +475,9 @@ NIL
 
 BUTTON
 217
-623
+626
 328
-656
+659
 Spawn Agents
 agent-spawn
 NIL
@@ -542,7 +543,7 @@ agent-number
 agent-number
 0
 100
-1.0
+6.0
 1
 1
 NIL
@@ -1401,7 +1402,7 @@ SWITCH
 615
 color-using-panic
 color-using-panic
-1
+0
 1
 -1000
 
@@ -1412,7 +1413,7 @@ SWITCH
 655
 color-ocean-o
 color-ocean-o
-0
+1
 1
 -1000
 
@@ -1423,7 +1424,7 @@ SWITCH
 691
 color-ocean-n
 color-ocean-n
-1
+0
 1
 -1000
 

@@ -202,7 +202,7 @@ to go
   ask patches with [onFire = true] [update-color spread-fire]
   ask patches with [onSmoke = true] [update-color spread-smoke]
   ask turtles with [dead = false] [damage update-panic color-panic damage count-collisions]
-  ask turtles with [panic = 1 and dead = false] [A* check-coll];see-exit check-coll]
+  ask turtles with [panic = 1 and dead = false] [A* check-coll see-exit]
   ask turtles with [panic = 2 and dead = false] [flock see-exit check-coll set inner-timer inner-timer - 1]
   ask turtles [check-death clear-body escape]
   check-end
@@ -473,10 +473,10 @@ NIL
 1
 
 BUTTON
-219
-623
-330
-656
+217
+626
+328
+659
 Spawn Agents
 agent-spawn
 NIL
@@ -542,7 +542,7 @@ agent-number
 agent-number
 0
 100
-22.0
+1.0
 1
 1
 NIL
@@ -822,7 +822,7 @@ fov-radius
 fov-radius
 0
 10
-4.0
+5.0
 1
 1
 patches
@@ -1390,7 +1390,7 @@ SWITCH
 579
 color-agent-type
 color-agent-type
-0
+1
 1
 -1000
 
@@ -1412,7 +1412,7 @@ SWITCH
 655
 color-ocean-o
 color-ocean-o
-1
+0
 1
 -1000
 

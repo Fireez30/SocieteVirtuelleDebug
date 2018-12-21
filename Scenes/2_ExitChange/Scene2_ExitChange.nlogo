@@ -473,10 +473,10 @@ NIL
 1
 
 BUTTON
-219
-623
-330
-656
+217
+626
+328
+659
 Spawn Agents
 agent-spawn
 NIL
